@@ -1,0 +1,58 @@
+export const subscriptions = [
+  {
+    id: 0,
+    plan: "Lite",
+    features: [
+      {title: "30 min de soporte"},
+      {title: "Acceso a recursos exclusivos"},
+      {title: "Actualizaciones mensuales"},
+    ],
+    price: 0.99,
+    src: "/img/cards/full-stack.webp",
+  },
+  {
+    id: 1,
+    plan: "Personal",
+    features: [
+      {title: "60 min de soporte"},
+      {title: "Acceso a recursos exclusivos"},
+      {title: "Actualizaciones mensuales"},
+      {title: "Asesoramiento personalizado"},
+      {title: "Descuentos en eventos"},
+    ],
+    price: 2.99,
+    src: "/img/cards/personal-attention.webp",
+  },
+  {
+    id: 2,
+    plan: "Business",
+    features: [
+      {title: "90 min de soporte"},
+      {title: "Acceso a recursos exclusivos"},
+      {title: "Actualizaciones mensuales"},
+      {title: "Asesoramiento personalizado"},
+      {title: "Descuentos en eventos"},
+      {title: "Sesiones de consulta adicionales"},
+      {title: "Informes de progreso"},
+    ],
+    price: 9.99,
+    src: "/img/cards/data-analyst.webp",
+  },
+  {
+    id: 3,
+    plan: "Enterprise",
+    features: [
+      {title: "120 min de soporte"},
+      {title: "Acceso a recursos exclusivos"},
+      {title: "Actualizaciones mensuales"},
+      {title: "Asesoramiento personalizado"},
+      {title: "Descuentos en eventos"},
+      {title: "Sesiones de consulta adicionales"},
+      {title: "Informes de progreso"},
+      {title: "Asesoría estratégica avanzada"},
+      {title: "Acceso prioritario a eventos exclusivos"},
+    ],
+    price: 49.99,
+    src: "/img/cards/startup.webp",
+  },
+];

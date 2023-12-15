@@ -1,7 +1,7 @@
 .animation-cards {
-  animation: movement-cards linear both;
+  animation: movement-cards ease-in-out both;
   animation-timeline: view();
-  animation-range: entry 16% cover 32%;
+  animation-range: entry 12% cover 28%;
 }
 
 @keyframes movement-cards {

@@ -5,30 +5,29 @@
 }
 
 .bg-header{
-  background-image: linear-gradient(to bottom, #51719881, 8%, #fefefe),
-    url("/img/bg-cards.jpg");
+  background-image: linear-gradient(to bottom, #517198b2, 1%, #fefefe),
+    url("/img/bg-abstract.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-section-two {
+  background-image: linear-gradient(to top, #fefefe98, 40%, #fefefe),
+    url("/img/bg-abstract.webp");
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 128px;
+  border-bottom-right-radius: 128px;
+}
+
+.bg {
+  background-image: linear-gradient(to top, #51719894, 50%, #fefefe79),
+    url("/img/bg-abstract.webp");
   background-size: cover;
   background-position: center;
 }
 
 /* ANIMATIONS */
-
-.icon-animation{  
-  animation: opacity-animations 2s ease-in-out infinite;
-}
-
-@keyframes opacity-animations {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-
 
 
 

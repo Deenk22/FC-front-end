@@ -1,5 +1,6 @@
 export const font = {
   typography: {
+    fontFamily: ["Quicksand, sans-serif"],
     fontSize: 16,
     h1: {
       fontSize: "4.3rem",

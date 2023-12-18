@@ -3,12 +3,11 @@ import Subscriptions from "../../components/Cards/Subscriptions";
 import Services from "../../components/Cards/Services";
 import IconSection from "../../components/IconSections/IconSections";
 import {services} from "../../const/services";
-import {iconInfoSection} from "../../const/iconInfoSection";
 import {subscriptions} from "../../const/subscriptions";
+import {headerIcons} from "../../const/headerIcons";
 import ButtonDesign from "../../ui/ButtonDesign";
 
-const text = "Comienza";
-const explore = "Información";
+const text = "Empieza Ahora";
 
 export default function HomeView() {
   const Img = styled("img")({
@@ -20,53 +19,53 @@ export default function HomeView() {
       <Grid
         className="bg-header"
         container
-        direction={"row"}
-        justifyContent={"center"}
+        justifyContent={"space-evenly"}
         alignItems={"center"}
         height={"100vh"}
-        gap={{lg: 16, xl: 0}}
       >
-        <Grid item xs={8} sm={10} md={10} lg={3} xl={4}>
-          <Box
-            border={2}
-            px={2}
-            py={4}
-            borderRadius={2}
-            bgcolor={"secondary.main"}
-            borderColor={"primary.main"}
-          >
-            <Typography variant="h1" color={"primary"}>
+        <Grid item xl={3}>
+          <Box ml={1}>
+            <Typography
+              variant="h1"
+              component={"h1"}
+              color={"primary"}
+              ml={-0.5}
+            >
               Flux Capacity
             </Typography>
-            <Typography variant="body1" color={"paragraph.main"} mt={2}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              facilis provident hic aliquid, dignissimos laboriosam? Repellat,
-              odio reiciendis? Quidem porro, itaque obcaecati nihil aut libero
-              quae optio minus perferendis eligendi.
+            <Typography variant="body1" color={"paragraph.main"} mt={2} mb={3}>
+              En <strong className="strong">Flux Capacity</strong>, estamos
+              comprometidos para ayudarte a impulsar tu proyecto o negocio,
+              guiándote hacia la elección acertada y, ante todo, previniendo
+              posibles contratiempos futuros.
             </Typography>
+            <ButtonDesign text={text} />
           </Box>
         </Grid>
-        <Grid item xs={10} sm={10} md={10} lg={4} xl={4}>
-          <Box textAlign={{xs: "center", lg: "right", xl: "right"}}>
-            <Img
-              src="/img/consultancy.webp"
-              alt="Two girls working together"
-              sx={{
-                mt: {xs: -8, sm: 0},
-                ml: {xs: -2, sm: 0, lg: -8, xl: 4},
-                height: {xs: 304, sm: 416, md: 512, xl: 544},
-              }}
-            />
-          </Box>
+        <Grid item xl={5}>
+          <img
+            className="img-design"
+            src="/img/demo.jpg"
+            width={"100%"}
+            alt="Three people working together"
+          />
         </Grid>
       </Grid>
+      <Box ml={28} className="animation-text">
+        <Typography variant="h2" color={"primary"} ml={-0.5}>
+          Servicios
+        </Typography>
+        <Typography variant="body1" color={"paragraph.main"}>
+          Descubre alguno de nuestros servicios más populares.
+        </Typography>
+      </Box>
       <Grid
         container
         direction={"row"}
         justifyContent={"center"}
         alignItems={"center"}
         gap={8}
-        my={2}
+        my={4}
       >
         {services.map((service) => {
           return (
@@ -76,6 +75,14 @@ export default function HomeView() {
           );
         })}
       </Grid>
+      <Box ml={28} mt={16}>
+        <Typography variant="h2" color={"primary"} ml={-0.5}>
+          El tiempo
+        </Typography>
+        <Typography variant="body1" color={"paragraph.main"}>
+          Sigue estos 4 pasos y aprovecha el tiempo al máximo.
+        </Typography>
+      </Box>
       <Grid
         container
         direction={"row"}
@@ -84,7 +91,7 @@ export default function HomeView() {
         gap={8}
         my={8}
       >
-        {iconInfoSection.map((iconInfo) => {
+        {headerIcons.map((iconInfo) => {
           return (
             <Grid item key={iconInfo.id} xs={8} sm={4} md={4} lg={2} xl={2}>
               <IconSection {...iconInfo} />
@@ -111,20 +118,29 @@ export default function HomeView() {
           </Box>
         </Grid>
         <Grid item xl={4}>
-          <Typography variant="h4" color={"primary"}>
+          <Typography variant="h4" component={"h1"} color={"primary"}>
             Atención personalizada
           </Typography>
-          <Typography variant="body2" color={"paragraph.main"} mb={2}>
-            En cada llamada, haremos todo lo posible para satisfacer tu
-            petición. no dejaremos que te vayas con la misma duda, la
-            solucionaremos juntos!.
+          <Typography variant="body1" color={"paragraph.main"} mt={1} mb={3}>
+            En cada interacción, nos esforzamos por abordar tus necesidades de
+            manera integral. Nos comprometemos a resolver tus dudas y
+            preocupaciones, asegurándonos de que cada sesión sea una experiencia
+            valiosa y esclarecedora.
           </Typography>
           <Box display={"flex"} gap={2}>
             <ButtonDesign text={text} />
-            <ButtonDesign explore={explore} />
           </Box>
         </Grid>
       </Grid>
+      <Box ml={28} mt={16} className="animation-text">
+        <Typography variant="h2" color={"primary"} ml={-0.5}>
+          Planifícate
+        </Typography>
+        <Typography variant="body1" color={"paragraph.main"}>
+          Elige tu plan y mantén un rumbo claro y sin sorpresas durante la
+          creación de tu proyecto.
+        </Typography>
+      </Box>
       <Grid
         container
         direction={"row"}
@@ -144,3 +160,24 @@ export default function HomeView() {
     </>
   );
 }
+
+// <Box display={"flex"} justifyContent={"start"} gap={4} mt={3}>
+//   {headerIcons.map((iconInfo) => {
+//     const {title, icon} = iconInfo;
+//     return (
+//       <Box
+//         key={title}
+//         display={"flex"}
+//         flexDirection={"row"}
+//         alignItems={"center"}
+//         gap={0.5}
+//         mb={4}
+//       >
+//         <img src={icon} alt={title} />
+//         <Typography variant="body2" color={"paragraph.main"}>
+//           {title}
+//         </Typography>
+//       </Box>
+//     );
+//   })}
+// </Box>;

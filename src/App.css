@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -5,14 +7,14 @@
 }
 
 .bg-header{
-  background-image: linear-gradient(to bottom, #517198b2, 1%, #fefefe),
+  background-image: linear-gradient(to bottom, #51719848, 8%, #fefefe),
     url("/img/bg-abstract.webp");
   background-size: cover;
   background-position: center;
 }
 
 .bg-section-two {
-  background-image: linear-gradient(to top, #fefefe98, 40%, #fefefe),
+  background-image: linear-gradient(to top, #fefefeb4, 40%, #fefefe),
     url("/img/bg-abstract.webp");
   background-size: cover;
   background-position: center;
@@ -20,17 +22,47 @@
   border-bottom-right-radius: 128px;
 }
 
-.bg {
-  background-image: linear-gradient(to top, #51719894, 50%, #fefefe79),
+.footer-bg{
+  background-image: linear-gradient(to bottom, #517198b4, 50%, #fefefe),
     url("/img/bg-abstract.webp");
   background-size: cover;
   background-position: center;
 }
 
+.strong{
+  color: #517198;
+}
+
+.img-design{
+  border-bottom-left-radius: 128px;
+}
+
+.box-img-header{
+  position: absolute;
+  top: 10;
+}
+
+
 /* ANIMATIONS */
 
 
+/* .animation-text {
+  animation: movement-text ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 64%;
+}
 
+@keyframes movement-text {
+  from {
+    opacity: 0.9;
+    transform: translateY(128px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+} */
 
 
 

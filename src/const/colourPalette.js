@@ -2,7 +2,7 @@ export const colourPalette = {
   palette: {
     primary: {
       main: "#517198",
-      opacity: "rgba(81, 113, 152, 0.5)",
+      opacity: "rgba(81, 113, 152, 0.4)",
     },
     secondary: {
       main: "#f1f5fa",

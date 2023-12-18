@@ -19,7 +19,7 @@ export default function IconSection({...iconInfo}) {
       borderRadius={2}
       py={4}
       gap={1}
-      boxShadow={`8px 8px 4px 0px ${theme.palette.primary.opacity}`}
+      boxShadow={`4px 4px 4px 0px ${theme.palette.primary.opacity}`}
     >
       <Img src={icon} alt={title} />
       <Typography variant="body1" color={"secondary"}>

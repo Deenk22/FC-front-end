@@ -19,11 +19,12 @@ export default function HomeView() {
       <Grid
         className="bg-header"
         container
-        justifyContent={"space-evenly"}
+        justifyContent={"center"}
         alignItems={"center"}
         height={"100vh"}
+        gap={12}
       >
-        <Grid item xl={3}>
+        <Grid item xl={4}>
           <Box ml={1}>
             <Typography
               variant="h1"
@@ -33,7 +34,7 @@ export default function HomeView() {
             >
               Flux Capacity
             </Typography>
-            <Typography variant="body1" color={"paragraph.main"} mt={2} mb={3}>
+            <Typography variant="body1" color={"paragraph.main"} mt={2} mb={4}>
               En <strong className="strong">Flux Capacity</strong>, estamos
               comprometidos para ayudarte a impulsar tu proyecto o negocio,
               guiándote hacia la elección acertada y, ante todo, previniendo
@@ -42,23 +43,25 @@ export default function HomeView() {
             <ButtonDesign text={text} />
           </Box>
         </Grid>
-        <Grid item xl={5}>
-          <img
-            className="img-design"
-            src="/img/demo.jpg"
-            width={"100%"}
-            alt="Three people working together"
-          />
+        <Grid item xl={4}>
+          <Box
+            bgcolor={"primary.opacity"}
+            sx={{
+              borderTopLeftRadius: 128,
+              borderBottomRightRadius: 128,
+              borderBottomLeftRadius: 128,
+            }}
+            p={2}
+          >
+            <img
+              className="img-design"
+              src="/img/consultancy.webp"
+              width={"100%"}
+              alt="Three people working together"
+            />
+          </Box>
         </Grid>
       </Grid>
-      <Box ml={28} className="animation-text">
-        <Typography variant="h2" color={"primary"} ml={-0.5}>
-          Servicios
-        </Typography>
-        <Typography variant="body1" color={"paragraph.main"}>
-          Descubre alguno de nuestros servicios más populares.
-        </Typography>
-      </Box>
       <Grid
         container
         direction={"row"}
@@ -106,7 +109,7 @@ export default function HomeView() {
         justifyContent={"center"}
         alignItems={"center"}
         height={"100vh"}
-        gap={8}
+        gap={16}
       >
         <Grid item xl={4}>
           <Box textAlign={"right"}>
@@ -132,15 +135,6 @@ export default function HomeView() {
           </Box>
         </Grid>
       </Grid>
-      <Box ml={28} mt={16} className="animation-text">
-        <Typography variant="h2" color={"primary"} ml={-0.5}>
-          Planifícate
-        </Typography>
-        <Typography variant="body1" color={"paragraph.main"}>
-          Elige tu plan y mantén un rumbo claro y sin sorpresas durante la
-          creación de tu proyecto.
-        </Typography>
-      </Box>
       <Grid
         container
         direction={"row"}
@@ -160,24 +154,3 @@ export default function HomeView() {
     </>
   );
 }
-
-// <Box display={"flex"} justifyContent={"start"} gap={4} mt={3}>
-//   {headerIcons.map((iconInfo) => {
-//     const {title, icon} = iconInfo;
-//     return (
-//       <Box
-//         key={title}
-//         display={"flex"}
-//         flexDirection={"row"}
-//         alignItems={"center"}
-//         gap={0.5}
-//         mb={4}
-//       >
-//         <img src={icon} alt={title} />
-//         <Typography variant="body2" color={"paragraph.main"}>
-//           {title}
-//         </Typography>
-//       </Box>
-//     );
-//   })}
-// </Box>;

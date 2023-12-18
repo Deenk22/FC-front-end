@@ -14,7 +14,7 @@ export const services = [
     id: 2,
   },
   {
-    title: "Networking",
+    title: "Challenges",
     description:
       "Offering personalized guidance and support to individuals, sharing insights and expertise to help them navigate their professional and personal development journeys.",
     src: "/img/cards/networking-img.webp",

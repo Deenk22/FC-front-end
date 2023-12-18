@@ -6,7 +6,7 @@ export const colourPalette = {
     },
     secondary: {
       main: "#f1f5fa",
-      opacity: "rgba(241, 245, 250, 0.2)",
+      opacity: "rgba(241, 245, 250, 0.4)",
     },
     paragraph: {
       main: "#222",

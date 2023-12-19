@@ -1,52 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-.bg-header{
+.bg-header {
   background-image: linear-gradient(to bottom, #51719848, 8%, #fefefe),
-    url("/img/bg-abstract.webp");
+    url('/img/bg-abstract.webp');
   background-size: cover;
   background-position: center;
 }
 
 .bg-section-two {
   background-image: linear-gradient(to top, #fefefeb4, 40%, #fefefe),
-    url("/img/bg-abstract.webp");
+    url('/img/bg-abstract.webp');
   background-size: cover;
   background-position: center;
   border-bottom-left-radius: 256px;
   border-bottom-right-radius: 256px;
 }
 
-.footer-bg{
+.footer-bg {
   background-image: linear-gradient(to bottom, #517198b4, 50%, #fefefe),
-    url("/img/bg-abstract.webp");
+    url('/img/bg-abstract.webp');
   background-size: cover;
   background-position: center;
   border-top-left-radius: 128px;
   border-top-right-radius: 128px;
 }
 
-.strong{
+.strong {
   color: #517198;
 }
 
-.img-design{
+.img-design {
   border-bottom-left-radius: 128px;
 }
 
-.box-img-header{
+.box-img-header {
   position: absolute;
   top: 10;
 }
-
-
-
-
-
-
-

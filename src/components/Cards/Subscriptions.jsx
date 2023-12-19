@@ -1,73 +1,74 @@
 import {
   Box,
+  Button,
   List,
   ListItem,
   ListItemText,
   Paper,
   Typography,
   styled,
-} from "@mui/material";
-import ButtonDesign from "../../ui/ButtonDesign";
+} from '@mui/material';
 
-const text = "Comienza";
+export default function Subscriptions({ ...subs }) {
+  const { plan, features, src, price } = subs;
 
-export default function Subscriptions({...subs}) {
-  const {plan, features, src, price} = subs;
-
-  const Img = styled("img")({
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
+  const Img = styled('img')({
+    width: '100%',
+    height: '100%',
   });
 
   return (
-    <Paper elevation={7} className="animation-cards">
-      <Img src={src} alt={plan} />
-      <Box p={2}>
-        <Typography
-          variant="h5"
-          component={"h1"}
-          color={"primary"}
-          mb={1}
-          p={1}
-          sx={{
-            borderTop: 2,
-            borderLeft: 2,
-            borderBottom: 2,
-            borderBottomLeftRadius: 16,
-            background:
-              "linear-gradient(to right,rgba(241, 245, 250, 0.2), 88%,  rgba(81, 113, 152, 0.5))",
-          }}
-        >
-          {subs.plan}
-        </Typography>
-        <List>
-          {features?.map((listItem) => {
-            const {title} = listItem;
-            return (
-              <ListItem key={title} disablePadding>
-                <ListItemText>{title}</ListItemText>
-              </ListItem>
-            );
-          })}
-        </List>
-        <Box
-          display={"flex"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
-          mt={8}
-        >
+    <Box className="active-plans">
+      <Paper elevation={7} className="animation-cards">
+        <Img src={src} alt={plan} />
+        <Box p={2}>
           <Typography
-            variant="body1"
-            color={"paragraph.main"}
+            variant="h5"
+            component={'h1'}
+            color={'primary'}
+            mb={1}
             p={1}
-            borderRadius={2}
+            sx={{
+              borderTop: 2,
+              borderLeft: 2,
+              borderBottom: 2,
+              borderBottomLeftRadius: 16,
+              background:
+                'linear-gradient(to right,rgba(241, 245, 250, 0.2), 88%,  rgba(81, 113, 152, 0.5))',
+            }}
           >
-            {price} €
+            {subs.plan}
           </Typography>
-          <ButtonDesign text={text} />
+          <List>
+            {features?.map((listItem) => {
+              const { title } = listItem;
+              return (
+                <ListItem key={title} disablePadding>
+                  <ListItemText>{title}</ListItemText>
+                </ListItem>
+              );
+            })}
+          </List>
+          <Box
+            display={'flex'}
+            justifyContent={'space-between'}
+            alignItems={'center'}
+            mt={8}
+          >
+            <Typography
+              variant="body1"
+              color={'paragraph.main'}
+              p={1}
+              borderRadius={2}
+            >
+              {price} €
+            </Typography>
+            <Button disablePadding disabled variant="contained" size="small">
+              No disponible
+            </Button>
+          </Box>
         </Box>
-      </Box>
-    </Paper>
+      </Paper>
+    </Box>
   );
 }

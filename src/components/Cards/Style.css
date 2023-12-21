@@ -1,4 +1,4 @@
-.animation-cards {
+/* .animation-cards {
   animation: movement-cards ease both;
   animation-timeline: view();
   animation-range: entry 20% cover 40%;
@@ -16,4 +16,4 @@
 
 .active-plans {
   opacity: 0.5;
-}
+} */

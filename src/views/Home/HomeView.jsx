@@ -1,11 +1,14 @@
 import {Box, Grid, Typography, styled} from "@mui/material";
-import Subscriptions from "../../components/Cards/Subscriptions";
 import Services from "../../components/Cards/Services";
 import IconSection from "../../components/IconSections/IconSections";
 import {services} from "../../const/services";
-import {subscriptions} from "../../const/subscriptions";
 import {headerIcons} from "../../const/headerIcons";
 import ButtonDesign from "../../ui/ButtonDesign";
+import LoginFormAdv from "../../components/LoginForm/LoginFormAdv";
+import RegFormAdv from "../../components/RegForm/RegFormAdv";
+import Subscriptions from "../../components/Cards/Subscriptions";
+import {subscriptions} from "../../const/subscriptions";
+import ModalDesign from "../../components/Modal/ModalDesign";
 
 const text = "Empieza Ahora";
 
@@ -38,13 +41,14 @@ export default function HomeView() {
               En <strong className="strong">Flux Capacity</strong>, estamos
               comprometidos para ayudarte a impulsar tu proyecto o negocio,
               guiándote hacia la elección acertada y, ante todo, previniendo
-              posibles contratiempos futuros.
+              posibles contratiempos futuros. Ahora, y sin necesidad de
+              registrarte, puedes recibir tu primer contenido totalmente gratis.
             </Typography>
-            <ButtonDesign text={text} />
+            <ModalDesign />
           </Box>
         </Grid>
         <Grid item xl={3}>
-          <Box
+          {/* <Box
             bgcolor={"primary.opacity"}
             sx={{
               borderTopLeftRadius: 128,
@@ -59,7 +63,9 @@ export default function HomeView() {
               width={"100%"}
               alt="Three people working together"
             />
-          </Box>
+          </Box> */}
+          <LoginFormAdv />
+          <RegFormAdv />
         </Grid>
       </Grid>
       <Grid

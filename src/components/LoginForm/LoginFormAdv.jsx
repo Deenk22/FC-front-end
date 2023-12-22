@@ -2,7 +2,7 @@ import {useForm} from "react-hook-form";
 import {DevTool} from "@hookform/devtools";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {loginSchema} from "../../helpers/loginSchema";
-import {TextField, Button, Stack, Typography} from "@mui/material";
+import {TextField, Button, Stack, Typography, Box} from "@mui/material";
 import {useAuth} from "../../hooks/useAuth";
 
 export default function LoginFormAdv() {
@@ -29,14 +29,21 @@ export default function LoginFormAdv() {
   // console.log(isSubmitSuccessful);
 
   const onSubmit = (LoginFormData) => {
-    login(LoginFormData);
     reset();
+    login(LoginFormData);
   };
 
   return (
-    <>
-      <Typography variant="body1" color={"primary"} mb={2}>
-        LoginForm
+    <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
+      <Typography
+        variant="body1"
+        color={"primary"}
+        borderBottom={2}
+        width={"100%"}
+        paddingBottom={1}
+        mb={2}
+      >
+        Login
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <Stack spacing={2} width={320}>
@@ -63,11 +70,11 @@ export default function LoginFormAdv() {
             variant="contained"
             color="primary"
           >
-            Inicia Sesión
+            Iniciar Sesión
           </Button>
         </Stack>
       </form>
       <DevTool control={control} />
-    </>
+    </Box>
   );
 }

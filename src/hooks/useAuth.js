@@ -9,9 +9,9 @@ import {useNavigate} from "react-router-dom";
 // En Strapi, Cuando se crea un usuario y no se le asigna un rol, o se usa la ruta api/auth/local/register, se le asigna automáticamente el rol "autenticado". Esto podemos cambiarlo en la pestaña configuración avanzada de Strapi.
 
 export const useAuth = () => {
-  const navigate = useNavigate();
   const {user, addUser, removeUser} = useUser();
   const {getItem} = useLocalStorage();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const user = getItem(FC_KEY);
@@ -21,7 +21,6 @@ export const useAuth = () => {
   }, [getItem, addUser]);
 
   const login = async (LoginFormData) => {
-    console.log(LoginFormData);
     try {
       const response = await axios.post(
         "http://localhost:1337/api/auth/local",

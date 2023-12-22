@@ -50,22 +50,7 @@ export default function HomeView() {
           </Box>
         </Grid>
         <Grid item xl={3}>
-          {/* <Box
-            bgcolor={"primary.opacity"}
-            sx={{
-              borderTopLeftRadius: 128,
-              borderBottomRightRadius: 128,
-              borderBottomLeftRadius: 128,
-            }}
-            p={2}
-          >
-            <img
-              className="img-design"
-              src="/img/consultancy.webp"
-              width={"100%"}
-              alt="Three people working together"
-            />
-          </Box> */}
+          Empty Space
         </Grid>
       </Grid>
       <Grid

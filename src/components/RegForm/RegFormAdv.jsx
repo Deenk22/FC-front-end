@@ -1,10 +1,12 @@
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {regSchema} from "../../helpers/regSchema";
-import {TextField, Button, Stack, Typography} from "@mui/material";
+import {TextField, Button, Stack, Typography, Box} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
 export default function RegFormAdv() {
+  const navigate = useNavigate();
   const form = useForm({
     resolver: zodResolver(regSchema),
     mode: "onChange",
@@ -26,18 +28,33 @@ export default function RegFormAdv() {
   // isSubmitSuccessful Podemos decir que si isSubmitSuccessful === true / notificaremos al usuario con React Hot Toast, una notificación.
   // console.log(isSubmitSuccessful);
 
+  // Sacar esta lógica del componente.
+
   const onSubmit = async (regFormData) => {
     console.log(regFormData);
-    await axios.post(
-      "http://localhost:1337/api/auth/local/register",
-      regFormData
-    );
-    reset();
+    try {
+      const {data} = await axios.post(
+        "http://localhost:1337/api/auth/local/register",
+        regFormData
+      );
+      reset();
+      navigate("/", {replace: true});
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
-    <>
-      <Typography variant="body1" color={"primary"} mb={2}>
+    <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
+      <Typography
+        variant="body1"
+        color={"primary"}
+        borderBottom={2}
+        width={"100%"}
+        paddingBottom={1}
+        mb={2}
+      >
         Regístrate
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -86,6 +103,6 @@ export default function RegFormAdv() {
           </Button>
         </Stack>
       </form>
-    </>
+    </Box>
   );
 }

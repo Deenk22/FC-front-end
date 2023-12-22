@@ -57,7 +57,7 @@ export default function ModalDesign() {
           </Typography>
           <Typography variant="body2" color="secondary" mt={4} p={0.5}>
             Proponer al usuario registrarse para recibir más contenido y
-            redirigirlo a la vista de registro.
+            redirigirlo a la vista de registro / Subscribete a la newsletter.
           </Typography>
         </Box>
       </Modal>

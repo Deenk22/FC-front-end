@@ -1,14 +1,13 @@
-import {Box, Grid, Typography, styled} from "@mui/material";
+import {Box, Button, Grid, Typography, styled} from "@mui/material";
 import Services from "../../components/Cards/Services";
 import IconSection from "../../components/IconSections/IconSections";
 import {services} from "../../const/services";
 import {headerIcons} from "../../const/headerIcons";
 import ButtonDesign from "../../ui/ButtonDesign";
-import LoginFormAdv from "../../components/LoginForm/LoginFormAdv";
-import RegFormAdv from "../../components/RegForm/RegFormAdv";
 import Subscriptions from "../../components/Cards/Subscriptions";
 import {subscriptions} from "../../const/subscriptions";
 import ModalDesign from "../../components/Modal/ModalDesign";
+import {Link} from "react-router-dom";
 
 const text = "Empieza Ahora";
 
@@ -45,6 +44,9 @@ export default function HomeView() {
               registrarte, puedes recibir tu primer contenido totalmente gratis.
             </Typography>
             <ModalDesign />
+            <Link to={"/login"}>
+              <Button>Login</Button>
+            </Link>
           </Box>
         </Grid>
         <Grid item xl={3}>
@@ -64,8 +66,6 @@ export default function HomeView() {
               alt="Three people working together"
             />
           </Box> */}
-          <LoginFormAdv />
-          <RegFormAdv />
         </Grid>
       </Grid>
       <Grid
